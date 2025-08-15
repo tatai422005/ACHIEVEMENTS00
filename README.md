@@ -4,7 +4,6 @@ hello Tatai!
 @bcrec'2026
 <!DOCTYPE html>
 
-Web Developer
-Full stack!
+Full Stack Web Developer
 MERN Stack Enthusiast!
 UX/UI Designer
