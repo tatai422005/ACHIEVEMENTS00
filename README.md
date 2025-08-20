@@ -11,7 +11,8 @@ UX/UI Designer !!!
 
 ## 🏆 My GitHub Achievements
 
-## 🏅 My GitHub Achievements
+# 👋 Hi, I'm Tatai!
 
-![Achievements](https://github-profile-achievements.vercel.app/api/tatai422005)
-
+### 🏆 My GitHub Achievements
+<!--START_SECTION:achievements-->
+<!--END_SECTION:achievements-->
