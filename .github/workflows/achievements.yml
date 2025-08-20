@@ -1,0 +1,17 @@
+name: Update GitHub Achievements
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # runs every day at midnight UTC
+  workflow_dispatch:       # lets you run it manually
+
+jobs:
+  update-achievements:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update Achievements in README
+        uses: ryo-ma/github-profile-achievements@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
