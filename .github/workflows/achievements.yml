@@ -2,16 +2,38 @@ name: Update GitHub Achievements
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs every day at midnight UTC
-  workflow_dispatch:       # lets you run it manually
+    - cron: "0 */12 * * *"  # Runs every 12 hours
+  workflow_dispatch:
 
 jobs:
-  update-achievements:
+  update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Fetch Achievements
+        run: |
+          curl -s https://github.com/users/tatai422005/achievements | \
+          grep -oP '(?<=src=")[^"]*' | grep avatars | head -n 20 > achievements.txt
 
-      - name: Update Achievements in README
-        uses: ryo-ma/github-profile-achievements@main
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update README
+        run: |
+          echo "<!--START_SECTION:achievements-->" > achievements.md
+          while read url; do
+            echo "<img src=\"$url\" width=\"80\" /> " >> achievements.md
+          done < achievements.txt
+          echo "<!--END_SECTION:achievements-->" >> achievements.md
+          
+          # Replace old section with new one
+          sed -i -e '/<!--START_SECTION:achievements-->/,/<!--END_SECTION:achievements-->/{
+            r achievements.md
+            d
+          }' README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update achievements"
+          git push
