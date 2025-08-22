@@ -12,7 +12,7 @@ UX/UI Designer !
 
 ## 🏆 My GitHub Achievements
 
-## 👋 Hi, I'm Tatai!
+## 👋 Hi, I'm Tatai
 
 
 
