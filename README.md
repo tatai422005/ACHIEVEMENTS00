@@ -1,11 +1,11 @@
 # ACHIEVEMENTS!
-hello Tatai!!
+hello Tatai !!
 @cse !!
 @bcrec'2026!!
 <!DOCTYPE html>
 
 Full Stack Web Developer !!
-MERN Stack Enthusiast!!
+MERN Stack Enthusiast !!
 UX/UI Designer !!
 
 ## 👋 Hi, I'm Tatai!!
