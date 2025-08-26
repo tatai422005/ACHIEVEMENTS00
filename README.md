@@ -6,6 +6,6 @@ Hello Tatai !!!
 
 ## Full Stack Web Developer !!!
 MERN Stack Enthusiast !!!
-UX/UI Designer !!!
+UX
 
 ## 👋 Hi, I'm Tatai !!
