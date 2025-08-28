@@ -4,7 +4,7 @@ Hello Tatai !!!
 @ Bcrec'2026 !!!
 <!DOCTYPE html>
 
-## Full Stack Web Developer !!!
+## Full Stack Web Developer !!
 MERN Stack Enthusiast !!
 
 ## 👋 Hi, I'm Tatai !!!
